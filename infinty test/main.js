@@ -55,8 +55,7 @@ setInterval(function() {
 window.onload = function(){
     updatedisplay1();
 }
-
-setInterval(function(){
+function addmoney(){
     moneypersocond = 0
     for(b = 0; b < eme.level.length; b++){
         if(eme.amount[b] > 0){
@@ -66,4 +65,7 @@ setInterval(function(){
     }
     document.getElementById("money").innerHTML = money
     document.getElementById("mgps").innerHTML = moneypersocond
+}    
+setInterval(function(){
+    addmoney();
 }, 1000)
