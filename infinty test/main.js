@@ -2,20 +2,7 @@ var levelcounter = 1
 var lastminerstartcost = 1
 var money = 1
 var moneypersocond = 0
-function updatedisplay1(){
-    var minerInfoHTML = ""; // Initialize an empty string to store miner information
-    for (a = 0; a < eme.level.length; a++) {
-        minerInfoHTML += '<div onclick="eme.purchase('+a+')"><p>miner level ' + eme.level[a] + ' Cost '+ eme.cost[a]+' Amount '+ eme.amount[a] +'</p></div>';
-    }
-    moneypersocond = 0
-    for(b = 0; b < eme.level.length; b++){
-        if(eme.amount[b] > 0){
-            moneypersocond += eme.level[b]
-        }
-    }
-    document.getElementById("mgps").innerHTML = moneypersocond
-    document.getElementById("main").innerHTML = minerInfoHTML; // Set the HTML for all miners
-}
+
 
 var eme={
     level:[1],
@@ -47,6 +34,20 @@ var eme={
     }    
 }
 
+function updatedisplay1(){
+    var minerInfoHTML = ""; // Initialize an empty string to store miner information
+    for (a = 0; a < eme.level.length; a++) {
+        minerInfoHTML += '<div onclick="eme.purchase('+a+')"><p>miner level ' + eme.level[a] + ' Cost '+ eme.cost[a]+' Amount '+ eme.amount[a] +'</p></div>';
+    }
+    moneypersocond = 0
+    for(c = 0; c < eme.level.length; c++){
+        if(eme.amount[c] > 0){
+            moneypersocond += eme.level[c] * eme.amount[c]
+        }
+    }
+    document.getElementById("mgps").innerHTML = moneypersocond
+    document.getElementById("main").innerHTML = minerInfoHTML; // Set the HTML for all miners
+}
 
 setInterval(function() {
     updatedisplay1();
@@ -60,7 +61,7 @@ setInterval(function(){
     for(b = 0; b < eme.level.length; b++){
         if(eme.amount[b] > 0){
             money += eme.level[b]
-            moneypersocond += eme.level[b]
+            moneypersocond += eme.level[b] * eme.amount[b]
         }
     }
     document.getElementById("money").innerHTML = money
