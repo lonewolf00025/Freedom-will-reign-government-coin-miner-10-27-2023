@@ -42,7 +42,7 @@ function updatedisplay1(){
     moneypersocond = 0
     for(c = 0; c < eme.level.length; c++){
         if(eme.amount[c] > 0){
-            moneypersocond += eme.level[c] * eme.amount[c]
+            moneypersocond += (eme.level[c] * eme.amount[c])
         }
     }
     document.getElementById("mgps").innerHTML = moneypersocond
@@ -61,7 +61,7 @@ setInterval(function(){
     for(b = 0; b < eme.level.length; b++){
         if(eme.amount[b] > 0){
             money += eme.level[b]
-            moneypersocond += eme.level[b] * eme.amount[b]
+            moneypersocond += (eme.level[b] * eme.amount[b])
         }
     }
     document.getElementById("money").innerHTML = money
