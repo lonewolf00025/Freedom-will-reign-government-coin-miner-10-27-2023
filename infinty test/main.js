@@ -70,7 +70,7 @@ function purchase(index){
 function updatedisplay1(){
     var minerInfoHTML = ""; // Initialize an empty string to store miner information
     for (a = 0; a < eme.level.length; a++) {
-        minerInfoHTML += '<div onclick="purchase('+a+')"><p>miner level ' + eme.level[a] + ' Cost '+ eme.cost[a]+' Amount '+ eme.amount[a] +'</p></div>';
+        minerInfoHTML += '<div onclick="purchase('+a+')"><p>miner level ' + numberformat.formatShort(eme.level[a], {sigfigs: 3}) + ' Cost '+ numberformat.formatShort(eme.cost[a], {sigfigs: 3})+' Amount '+ numberformat.formatShort(eme.amount[a], {sigfigs: 3}) +'</p></div>';
     }
     moneypersocond = 0
     for(c = 0; c < eme.level.length; c++){
