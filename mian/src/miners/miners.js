@@ -9,9 +9,9 @@ var cmi = {
     cost:[],
 }
 for (a = 0; a < 10; a++){
-    cmi.level.push(document.getElementById(mineridbase + String(numbercounter) + letter1).innerHTML)
-    cmi.amount.push(document.getElementById(mineridbase + String(numbercounter) + letter2).innerHTML)
-    cmi.cost.push(document.getElementById(mineridbase + String(numbercounter) + letter3).innerHTML)
+    cmi.level.push(Number(document.getElementById(mineridbase + String(numbercounter) + letter1).innerHTML))
+    cmi.amount.push(Number(document.getElementById(mineridbase + String(numbercounter) + letter2).innerHTML))
+    cmi.cost.push(Number(document.getElementById(mineridbase + String(numbercounter) + letter3).innerHTML))
     numbercounter += 1
 }
 function mineQuillar(){
