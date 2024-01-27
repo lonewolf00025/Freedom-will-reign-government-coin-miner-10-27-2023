@@ -21,3 +21,6 @@ function mineQuillar(){
     }
     document.getElementById("Quillar").innerHTML += Quillartemp
 }
+setInterval(function(){
+    mineQuillar();
+}, 1000)
