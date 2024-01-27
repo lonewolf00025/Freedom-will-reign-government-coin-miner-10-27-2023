@@ -1,13 +1,13 @@
-var levelcounter = 1
-var lastminerstartcost = 1
+var levelcounter = 10
+var lastminerstartcost = 512 
 var money = 1
 var moneypersocond = 0
 
 
 var eme={
-    level:[1],
-    cost:[1],
-    amount:[0],  
+    level:[1,2,3,4,5,6,7,8,9,10],
+    cost:[1,2,4,8,16,32,64,128,256,512],
+    amount:[0,0,0,0,0,0,0,0,0,0] 
 }
 function GEL1(){
     var gel1 = {
@@ -27,15 +27,16 @@ function LGEL1(){
     if(typeof lgel1.eme !== "undefined") eme = lgel1.eme;
 }
 function RGEL1(){
-    levelcounter = 1
-    lastminerstartcost = 1
+    levelcounter = 10
+    lastminerstartcost = 512 
     money = 1
     moneypersocond = 0
-
+    
+    
     eme={
-        level:[1],
-        cost:[1],
-        amount:[0],  
+        level:[1,2,3,4,5,6,7,8,9,10],
+        cost:[1,2,4,8,16,32,64,128,256,512],
+        amount:[0,0,0,0,0,0,0,0,0,0] 
     }
     GEL1();    
 }
@@ -48,9 +49,14 @@ function purchase(index){
             eme.cost[index] *= 2;
             levelcounter++;
             eme.level.push(levelcounter)
-            lastminerstartcost *= 4
+            lastminerstartcost *= 2;
             eme.cost.push(lastminerstartcost)
             eme.amount.push(0)
+            if(levelcounter >= 10){
+                eme.level.splice(eme.level[0])
+                eme.cost.splice(eme.cost[0])
+                eme.amount.splice(eme.amount[0])
+            }
         }
         GEL1();
         updatedisplay1();
