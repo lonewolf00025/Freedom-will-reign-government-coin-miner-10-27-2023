@@ -19,7 +19,8 @@ function mineQuillar(){
     for(a = 0; a < 10; a++){
         Quillartemp += cmi.level[a] * cmi.amount[a]
     }
-    document.getElementById("Quillar").innerHTML += Quillartemp
+    Quillartemp += Number(document.getElementById("Quillar").innerHTML)
+    document.getElementById("Quillar").innerHTML = Quillartemp
 }
 setInterval(function(){
     mineQuillar();
