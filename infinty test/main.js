@@ -42,21 +42,23 @@ function RGEL1(){
 }
 
 function purchase(index){
+    if(eme.amount[9] === 1){
+        levelcounter++;
+        eme.level.push(levelcounter)
+        lastminerstartcost *= 2;
+        eme.cost.push(lastminerstartcost)
+        eme.amount.push(0)
+        if(levelcounter >= 10){
+            eme.level.splice(eme.level[0])
+            eme.cost.splice(eme.cost[0])
+            eme.amount.splice(eme.amount[0])
+        }
+    }
     if(eme.amount[index] === 0){
         if(money >= eme.cost[index]){
             eme.amount[index]++;
             money -= eme.cost[index]
             eme.cost[index] *= 2;
-            levelcounter++;
-            eme.level.push(levelcounter)
-            lastminerstartcost *= 2;
-            eme.cost.push(lastminerstartcost)
-            eme.amount.push(0)
-            if(levelcounter >= 10){
-                eme.level.splice(eme.level[0])
-                eme.cost.splice(eme.cost[0])
-                eme.amount.splice(eme.amount[0])
-            }
         }
         GEL1();
         updatedisplay1();
