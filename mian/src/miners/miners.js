@@ -17,7 +17,7 @@ for (a = 0; a < 10; a++){
 function mineQuillar(){
     var Quillartemp = 0
     for(a = 0; a < 10; a++){
-        Quillartemp += level[a] * amount[a]
+        Quillartemp += cmi.level[a] * cmi.amount[a]
     }
     document.getElementById("Quillar").innerHTML += Quillartemp
 }
