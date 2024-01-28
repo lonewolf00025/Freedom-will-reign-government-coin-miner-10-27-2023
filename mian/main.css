@@ -5,17 +5,16 @@
 }
 .head{
     width: 150vw;
-    height:50vh;
+    height:25vw;
     margin-left: -25vw;
-    margin-top: -15vh;
+    margin-top: -10vw;
     z-index: 1;
     position: absolute;
 }
 .headc{
-    width: 100vw;
-    margin: 1%;
+    margin-top: 2.5vw;
     color: white;
-    font-size: 64px;
+    font-size: 6vw;
     z-index: 2;  
     position: relative;
     text-align: center;
@@ -27,7 +26,7 @@
     position: absolute;   
 }
 body{
-    height: 90vh;
+    height: 100vh;
     width: 100vw
 }
 .hiddenelemtstogame{
@@ -41,5 +40,5 @@ body{
     height: 50vh;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10vh;
+    margin-top: 10vw;
 }

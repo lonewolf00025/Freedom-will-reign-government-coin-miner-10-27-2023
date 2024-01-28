@@ -1,0 +1,14 @@
+.miners{
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 5vh;
+}
+.minertable{
+    height: 50vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    display: none;
+}
