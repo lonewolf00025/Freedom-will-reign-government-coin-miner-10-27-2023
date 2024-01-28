@@ -4,29 +4,42 @@
     overflow: hidden;
 }
 .head{
-    width: 150%;
-    height:50%;
-    margin-left: -25%;
-    margin-top: -15%;
+    width: 150vw;
+    height:50vh;
+    margin-left: -25vw;
+    margin-top: -15vh;
     z-index: 1;
     position: absolute;
 }
 .headc{
-    width: 100%;
+    width: 100vw;
     margin: 1%;
     color: white;
     font-size: 64px;
     z-index: 2;  
-    position: absolute;
+    position: relative;
     text-align: center;
 }
 .body{
-    width: 100%;
-    height:100%;
+    width: 100vw;
+    height:100vh;
     z-index: 0;
     position: absolute;   
+}
+body{
+    height: 90vh;
+    width: 100vw
 }
 .hiddenelemtstogame{
     display: none;
     z-index: 0;
+}
+.mainbody{
+    z-index: 1;
+    position: relative;
+    width: 80vw;
+    height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
 }
